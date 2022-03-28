@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filmai.controller.DashboardController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="800.0" prefWidth="500.0">
+         <children>
+            <Label alignment="CENTER" layoutX="424.0" layoutY="14.0" text="Filmai">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idSearch" layoutX="13.0" layoutY="126.0" promptText="id (trynimui/redagavimui)" />
+            <TextField fx:id="filmoPav" layoutX="332.0" layoutY="49.0" prefHeight="25.0" prefWidth="235.0" promptText="filmo pavadinimas" />
+            <Label layoutX="13.0" layoutY="325.0" text="Filmo kategorija">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="tableStatus" alignment="TOP_LEFT" layoutX="10.0" layoutY="605.0" prefHeight="41.0" prefWidth="156.0" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="sukurtiBut" layoutX="13.0" layoutY="392.0" mnemonicParsing="false" onAction="#createOnClick" prefHeight="25.0" prefWidth="70.0" text="Sukurti" />
+            <Button fx:id="ieskotiBut" layoutX="585.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchButtonClick" text="Ieškoti" textFill="#252525" />
+            <Button fx:id="redaguotiBut" layoutX="13.0" layoutY="438.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Redaguoti" />
+            <Button fx:id="trintiBut" layoutX="90.0" layoutY="392.0" mnemonicParsing="false" onAction="#onDeleteClick" prefHeight="25.0" prefWidth="63.0" text="Trinti" />
+            <TableView fx:id="filmaiTable" layoutX="173.0" layoutY="91.0" prefHeight="558.0" prefWidth="727.0">
+              <columns>
+                <TableColumn fx:id="idTable" prefWidth="30.599990844726562" text="id" />
+                <TableColumn fx:id="filmasTable" prefWidth="162.0" text="Filmo pavadinimas" />
+                  <TableColumn fx:id="IMDBTable" prefWidth="41.0" text="IMDB" />
+                  <TableColumn fx:id="kategorijaTable" prefWidth="98.0" text="Kategorija" />
+                  <TableColumn fx:id="aprasymasTable" prefWidth="377.0" text="Aprašymas" />
+              </columns>
+            </TableView>
+            <ChoiceBox fx:id="choiseBoxYear" layoutX="13.0" layoutY="357.0" prefWidth="150.0" />
+            <Label layoutX="744.0" layoutY="14.0" prefHeight="17.0" prefWidth="52.0" text="Vardas: " />
+            <Label fx:id="vardasLabel" layoutX="796.0" layoutY="14.0" prefHeight="17.0" prefWidth="96.0" />
+            <Label layoutX="744.0" layoutY="36.0" text="Grupe:" />
+            <Label fx:id="grupeLabel" layoutX="796.0" layoutY="36.0" prefHeight="17.0" prefWidth="96.0" />
+            <Button fx:id="logOutButton" layoutX="816.0" layoutY="62.0" mnemonicParsing="false" onAction="#onLogOutClick" prefHeight="25.0" prefWidth="70.0" text="Atsijungti" />
+            <TextField fx:id="filmasField" alignment="TOP_LEFT" layoutX="13.0" layoutY="164.0" promptText="filmo pavadinimas" />
+            <TextField fx:id="aprasymasField" alignment="TOP_LEFT" layoutX="13.0" layoutY="209.0" prefHeight="47.0" prefWidth="149.0" promptText="Aprašymas" />
+            <TextField fx:id="imdbField" layoutX="13.0" layoutY="279.0" promptText="IMDB reitingas" />
+            <TextField fx:id="kategorijaField" layoutX="13.0" layoutY="500.0" />
+            <Label layoutX="13.0" layoutY="474.0" text="Sukurti kategorija">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="kategorijaBut" layoutX="13.0" layoutY="534.0" mnemonicParsing="false" onAction="#onKategorijaCreate" prefHeight="25.0" prefWidth="149.0" text="Sukurti kategorija" />
+            <Button layoutX="15.0" layoutY="574.0" mnemonicParsing="false" onAction="#onKategorijaDelete" prefHeight="25.0" prefWidth="70.0" text="Trinti" />
+            <Button layoutX="90.0" layoutY="574.0" mnemonicParsing="false" onAction="#onKategorijaUpdate" text="Redaguoti" />
+         </children></Pane>
+   </children>
+</GridPane>
